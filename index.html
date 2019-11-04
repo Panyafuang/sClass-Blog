@@ -14,7 +14,7 @@
 </head>
 <body>
     <!-- NAV -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-alpha fixed-top">
+    <nav id="myNav" class="navbar navbar-expand-lg navbar-dark bg-alpha fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="assets/image/logo.png" width="35px" height="35px" class="d-inline-block align-top">
@@ -277,10 +277,11 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <!-- Bootstrap js -->
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- main.js -->
+    <script src="assets/js/main.js"></script>
 
     <script>
         let currYear = new Date().getFullYear();
-        console.log(currYear);
         document.querySelector('.year').innerHTML = currYear;
     </script>
 </body>
