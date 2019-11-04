@@ -1,11 +1,9 @@
-$(window).scroll(function () {
-    var scrollTop = $(this).scrollTop()
+let myNav = document.querySelector('.navExpand');
 
-    if (scrollTop > 1) {
-        //shut
-        $('#myNav').css('padding', '5px 25px')
-    } else {
-        //expand
-        $('#myNav').css('padding', '25px')
+document.body.addEventListener('scroll', function(){
+    if(document.body.scrollTop > 200 ){
+        myNav.classList.add('navShut');
+    }else{
+        myNav.classList.remove('navShut');
     }
 })

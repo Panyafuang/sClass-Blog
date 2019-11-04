@@ -84,14 +84,14 @@ h2, h3, h4, h5{
     left: 100%;
 }
 
-/* NAV */
-#myNav{
-    padding: 20px;
-    transition: 0.5s;
+/* NAV EFFECT */
+.navExpand{
+    padding: 25px;
+    transition: 0.3s;
 }
-
-
-
+.navShut{
+    padding: 10px;
+}
 
 
 /* SECTION: CAROURSEL */
@@ -186,4 +186,54 @@ footer div{
 footer div p{
     text-transform: uppercase;
     color: var(--soft-dark-color);
+}
+
+/* sm-device */
+@media (max-width: 768px){
+    /* CARROUSEL-CAPTION */
+    .carousel-caption{
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+    .carousel-caption h1 {
+        font-size: 3rem;
+    }
+    .carousel-caption p{
+        font-size: 1.1rem;
+    }
+
+    /* BIG TITLE */
+    .big-title{
+        font-size: 3rem;
+    }
+    .big-title::after{
+        display: none;
+    }
+}
+
+/* md-device */
+@media (min-width: 768px){
+    /* CAROUSEL-CATION */
+    .carousel-caption h1 {
+        font-size: 5rem;
+    }
+    .carousel-caption p {
+        font-size: 1.1rem;
+    }
+}
+
+/* lg-device */
+@media (min-width: 992px) {
+
+    /* CAROUSEL-CATION */
+    .carousel-caption h1 {
+        font-size: 6rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1.3rem;
+    }
 }
