@@ -4,7 +4,7 @@
 
 let myNav = document.querySelector('.navExpand');
 document.body.addEventListener('scroll', function(){
-    if(document.body.scrollTop > 200 ){
+    if(document.body.scrollTop > 150 ){
         // Add class .navShut
         myNav.classList.add('navShut');
     }else{

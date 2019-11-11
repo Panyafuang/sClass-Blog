@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC&display=swap');
 
 
 :root{
     --dark-color: #2b2b2b;
     --soft-dark-color: #9E9E9E;
-    --gold-color: #dba904;
+    --gold-color: #e8b923;
     --dark-gold-color: #bf9200;
     --grey-color: #e9ecef;
     --white-color: #dcdcdc;
@@ -14,8 +15,7 @@
 /*
  * ─── RESET ──────────────────────────────────────────────────────────────────────
  */
-
-    
+ 
 *{
     padding: 0;
     margin: 0;
@@ -40,7 +40,13 @@
  * ─── ULTILITIES ─────────────────────────────────────────────────────────────────
  */
 
-    
+.py-6{
+    padding: 6rem;
+} 
+.py-7{
+    padding: 7rem;
+}
+
 .bg-alpha{
     background-color: rgba(0, 0, 0, .8);
 }
@@ -70,6 +76,10 @@
 
 .brand-text{
     color: var(--gold-color);
+    /* font-family: 'Niconne',cursive; */
+    font-family: 'Amatic SC',cursive;
+    font-weight: 300;
+    font-size: 6.4rem;
 }
 
 .my-btn {
@@ -102,6 +112,8 @@
     padding-bottom: 70px;
     color: #FFF;
 }
+
+
 /* NAV EFFECT */
 .navExpand {
     padding: 20px;
@@ -210,6 +222,11 @@ footer div p{
     text-transform: uppercase;
     color: var(--soft-dark-color);
 }
+.map iframe{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
 
 
 /*
@@ -218,7 +235,7 @@ footer div p{
 
     /* SECTION: ABOUT */
     .vdo-about {
-        background: url('../image/carol-oliver-NnCA_Z6Fjg4-unsplash.jpg') center no-repeat;
+        background: url('../image/matheus-ferrero-F7JUUpOejr8-unsplash.jpg') center no-repeat;
         background-size: cover;
         height: 600px;
         display: flex;
@@ -238,15 +255,125 @@ footer div p{
         color: #FFF;
     }
     
+    .content-about h3{
+        color: var(--gold-color);
+    }
+
+    /* Time Line */
+    .timeline{
+        position: relative;
+        list-style: none;
+        padding: 20px 0;
+    }
+    .timeline > li{
+        position: relative;
+        margin-bottom: 3rem;
+    }
+    .timeline::before{
+        content: "";
+        position: absolute;
+        width: 3px; 
+        background-color: var(--gold-color);
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    li > .timeline-badge{
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        border: 5px solid var(--dark-gold-color);
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 50%;
+        background-color: #FFF;
+        box-shadow: 0 0 0 5px #FFF;
+        top: 15px;
+    }
+    li > .timeline-badge::before{
+        content: "";
+        position: absolute;
+        top: 5px;
+        right: 20px;
+        width: 25px;
+        height: 3px;
+        background: var(--gold-color);
+    }
+    li.inverted > .timeline-badge::before{
+        right: -34px;
+    }
+    li > .timeline-badge p{
+        width: 200px;
+        margin-top: -9px;
+        margin-left: 25px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: var(--gold-color);
+    }
+    li.inverted > .timeline-badge p{
+        color: var(--gold-color);
+        float: right;
+        text-align: right;
+        margin-right: 25px;
+    }
+    li > .timeline-card{
+        position: relative;
+        width: 46%;
+        float: left;
+        text-align: right;
+        padding: 0 10px;
+    }
+    li.inverted > .timeline-card{
+        float: right;
+        text-align: left;
+    }
+    .timeline > li::after{
+        content: "";
+        clear: both;
+        display: block;
+    }
+    .timeline-arrow{
+        width: 100%;
+        text-align: center;
+        bottom: -80px;
+        color: var(--gold-color);
+    }
+
+    /* Start Rating */
+    /* ★☆ */
+    .star-rating{
+        position: relative;
+        font-size: 2rem;
+        color: var(--dark-gold-color);
+        display: inline-block;
+    }
+    .star-inner{
+        position: absolute;
+        top: 0;
+        color: var(--gold-color);
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+
+
+
+
+
 
 
 /*
  * ─── MEDIA QUERY ────────────────────────────────────────────────────────────────
  */
-
     
 /* sm-device */
 @media (max-width: 768px){
+
+    /*
+     * ─── INDEX PAGE ─────────────────────────────────────────────────────────────────
+     */
+
     /* CARROUSEL-CAPTION */
     .carousel-caption{
         position: absolute;
@@ -269,6 +396,34 @@ footer div p{
     .big-title::after{
         display: none;
     }
+
+    /*
+     * ─── ABOUT PAGE ─────────────────────────────────────────────────────────────────
+     */
+    .timeline::before,
+    .timeline-badge{
+        left: 40px !important;
+    }
+    .timeline-badge::before{
+        right: -33px !important;
+    }
+    .timeline-badge p,
+    li.inverted > .timeline-badge p{
+        margin-left: 50px !important;
+        text-align: left;
+        float: left;
+    }
+    li > .timeline-card{
+        width: 100%;
+        text-align: left;
+        padding: 40px 0 0 85px;
+    }
+    .timeline-arrow{
+        text-align: left;
+        left: 26px;
+    }
+    
+
 }
 
 /* md-device */
