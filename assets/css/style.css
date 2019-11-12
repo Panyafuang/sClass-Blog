@@ -99,7 +99,7 @@
     top: 0;
     left: -100%;
     background: linear-gradient(120deg, transparent, rgba(255, 255, 255, .3), transparent);
-    transition: all .7s;
+    transition: all .4s;
 }
 .my-btn:hover::before {
     left: 100%;
@@ -111,6 +111,15 @@
     padding-top: 100px;
     padding-bottom: 70px;
     color: #FFF;
+}
+.page-title::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -340,6 +349,19 @@ footer div p{
         color: var(--gold-color);
     }
 
+    .about-title{
+        position: relative;
+    }
+    .about-title::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.2);
+        width: 100%;
+        height: 100%;
+    }
+
     /* Start Rating */
     /* ★☆ */
     .star-rating{
@@ -352,7 +374,7 @@ footer div p{
         position: absolute;
         top: 0;
         color: var(--gold-color);
-        white-space: nowrap;
+        /* white-space: nowrap; */
         overflow: hidden;
     }
 
@@ -383,7 +405,7 @@ footer div p{
         text-align: center;
     }
     .carousel-caption h1 {
-        font-size: 3rem;
+        font-size: 4rem;
     }
     .carousel-caption p{
         font-size: 1.1rem;
@@ -420,7 +442,10 @@ footer div p{
     }
     .timeline-arrow{
         text-align: left;
-        left: 26px;
+        left: 0;
+    }
+    .timeline-arrow > i{
+        margin-left: 26px;
     }
     
 
