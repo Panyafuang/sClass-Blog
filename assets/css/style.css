@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC&display=swap');
+/* Thai font */
+@import url('https://fonts.googleapis.com/css?family=Kanit&display=swap');
 
 
 :root{
-    --dark-color: #2b2b2b;
+    --dark-color: #313131;
     --dark-ligning: #3A474E;
     --soft-dark-color: #9E9E9E;
     --grey-color: #e9ecef;
@@ -53,15 +55,17 @@
 
 .big-title{
     font-family: "Lato",Arial,sans-serif;
+    color: var(--dark-color);
+    font-size: 3.3rem;
     position: relative;
     text-transform: uppercase;
-    margin-bottom: 2rem;
+    margin: 2rem 0;
     letter-spacing: 3px;
 }
 .big-title::after{
     content: attr(data-title);
     position: absolute;
-    top: -40px;
+    top: -28px;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
@@ -80,6 +84,12 @@
     font-family: 'Amatic SC',cursive;
     font-weight: 300;
     font-size: 6.4rem;
+}
+.brand-text-thai{
+    color: var(--gold-color);
+    /* font-family: 'Kanit',sans-serif; */
+    font-weight: 300;
+    font-size: 4rem;
 }
 
 .my-btn {
@@ -417,6 +427,15 @@ footer div p{
        .blog-image p{
            color: #FFF;
        }
+
+
+       /*
+        * ─── SECTION CONTACT ────────────────────────────────────────────────────────────
+        */
+
+           .contact .fas{
+                color: var(--gold-color);
+           }
 
 
 
