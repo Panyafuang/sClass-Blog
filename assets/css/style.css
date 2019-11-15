@@ -5,11 +5,11 @@
 
 :root{
     --dark-color: #2b2b2b;
+    --dark-ligning: #3A474E;
     --soft-dark-color: #9E9E9E;
-    --gold-color: #e8b923;
-    --dark-gold-color: #bf9200;
     --grey-color: #e9ecef;
-    --white-color: #dcdcdc;
+    --dark-gold-color: #bf9200;
+    --gold-color: #e8b923;
 }
 
 /*
@@ -83,8 +83,8 @@
 }
 
 .my-btn {
-    width: 100%;
-    padding: 5px 0 !important;
+    /* width: 100%; */
+    /* padding: 5px 7px; */
     color: #FFF;
     background: var(--gold-color);
     border: 1px solid var(--dark-gold-color);
@@ -103,6 +103,10 @@
 }
 .my-btn:hover::before {
     left: 100%;
+}
+.my-btn-active{
+    background: var(--dark-gold-color);
+    color: var(--grey-color);
 }
 
 .page-title{
@@ -203,8 +207,13 @@
     background-color: var(--grey-color);
     color: var(--soft-dark-color);
 }
+.my-footer span,
+footer p{
+    font-size: 0.9rem;
+}
 .my-footer a{
     color: var(--soft-dark-color);
+    font-size: 0.9rem;
     transition: color .4s;
 }
 .my-footer a:hover{
@@ -221,7 +230,7 @@
 /* FOOTER */
 footer{
     background-color: var(--grey-color);
-    padding: 2rem 0;
+    padding: 1rem 0;
 }
 footer div{
     margin: 0 auto;
@@ -379,8 +388,35 @@ footer div p{
     }
 
 
+    /*
+    * ─── BLOG PAGE ──────────────────────────────────────────────────────────────────
+    */
+        .my-btn-group button{
+            width: 100px;
+            margin-bottom: 0.3rem;
+        }    
 
 
+
+
+    /*
+     * ─── BLOG-DETAIL PAGE ───────────────────────────────────────────────────────────
+     */
+        .blog-card{
+            top: -5rem;
+            position: relative;
+            background: #FFF;
+            padding: 50px 100px;
+            box-shadow: 0 0.02rem 0.07rem rgba(0, 0, 0, .1), 0 0.07rem 1rem rgba(0, 0, 0, .1);
+        }
+       .blog-image{
+           padding: 200px 0 120px;
+           text-align: center;
+           background: rgba(0, 0, 0, .3);
+       }
+       .blog-image p{
+           color: #FFF;
+       }
 
 
 
@@ -389,14 +425,11 @@ footer div p{
  * ─── MEDIA QUERY ────────────────────────────────────────────────────────────────
  */
     
-/* sm-device */
+/*
+ * ─── SM-DEVICE ──────────────────────────────────────────────────────────────────
+ */
 @media (max-width: 768px){
-
-    /*
-     * ─── INDEX PAGE ─────────────────────────────────────────────────────────────────
-     */
-
-    /* CARROUSEL-CAPTION */
+    /* INDEX PAGE  */
     .carousel-caption{
         position: absolute;
         top: 45%;
@@ -410,8 +443,6 @@ footer div p{
     .carousel-caption p{
         font-size: 1.1rem;
     }
-
-    /* BIG TITLE */
     .big-title{
         font-size: 3rem;
     }
@@ -419,9 +450,7 @@ footer div p{
         display: none;
     }
 
-    /*
-     * ─── ABOUT PAGE ─────────────────────────────────────────────────────────────────
-     */
+    /* ABOUT PAGE  */
     .timeline::before,
     .timeline-badge{
         left: 40px !important;
@@ -447,11 +476,19 @@ footer div p{
     .timeline-arrow > i{
         margin-left: 26px;
     }
-    
+
+    /* BLOG DETAIL PAGE  */
+    .blog-card{
+         top: 0;
+         padding: 20px 8px;
+         box-shadow: none;
+    }
 
 }
 
-/* md-device */
+/*
+ * ─── MD-DEVICE ──────────────────────────────────────────────────────────────────
+ */    
 @media (min-width: 768px){
     /* CAROUSEL-CATION */
     .carousel-caption h1 {
@@ -460,16 +497,23 @@ footer div p{
     .carousel-caption p {
         font-size: 1.1rem;
     }
+
+    /* BLOG DETAIL PAGE  */
+     .blog-card{
+         padding: 40px 50px;
+     }
+
+        
 }
 
-/* lg-device */
+/*
+ * ─── LG-DEVICE ──────────────────────────────────────────────────────────────────
+ */    
 @media (min-width: 992px) {
-
     /* CAROUSEL-CATION */
     .carousel-caption h1 {
         font-size: 6rem;
     }
-
     .carousel-caption p {
         font-size: 1.3rem;
     }
