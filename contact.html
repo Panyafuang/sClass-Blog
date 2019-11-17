@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <!--number-based width or "device-width"-->
@@ -55,6 +56,7 @@
     <!-- Font awesome -->
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
 </head>
+
 <body>
     <!-- NAV -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-alpha fixed-top navExpand">
@@ -67,10 +69,10 @@
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-        
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto text-center">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
@@ -82,178 +84,124 @@
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="contact.html">Content</a>
                     </li>
-                    
+
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- SECTION: CAROUSEL -->
-    <section id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <!-- carousel image -->
-                <div class="carousel-img" style="background-image: url('assets/images/carousel1.jpg');">
-                <!-- carousel caption -->
-                <div class="carousel-caption">
-                    <h1 class="display-1 brand-text">caption one</h1>
-                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, esse!</p>
-                </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <!-- carousel image -->
-                <div class="carousel-img" style="background-image: url('assets/images/carousel2.jpg');">
-                <!-- carousel caption -->
-                <div class="carousel-caption">
-                    <h1 class="display-1 brand-text">caption two</h1>
-                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, esse!</p>
-                </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <!-- carousel image -->
-                <div class="carousel-img" style="background-image: url('assets/images/carousel3.jpg');">
-                <!-- carousel caption -->
-                <div class="carousel-caption">
-                    <h1 class="display-1 brand-text">caption three</h1>
-                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, esse!</p>
-                </div>
+    <!-- SECTION: PAGE TITLE -->
+    <header class="jarallax page-title" data-jarallax='{ "speed": 0.5 }'
+        style="background-image: url('assets/images/contact.jpg');">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center page-title-inner">
+                    <h1 class="display-2 brand-text-thai">ข้อมูลการติดต่อ</h1>
+                    <p class="lead">Panyafuang Shop</p>
                 </div>
             </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </section>
+    </header>
 
-    <!-- SECTION: JUMBORTRON -->
-    <section id="jumbotron" class="jumbotron jumbotron-fluid">
-        <div class="container text-center">
-            <h2 class="big-title" data-title="specialize in">specialize in</h2>
-            <div class="row">
-                <div class="col-12 col-md-4 py-4">
-                    <i class="fas fa-people-carry fa-4x mb-3"></i>
-                    <h3>guarantee</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus inventore, nesciunt quidem qui quasi enim eaque nemo quod ipsam maiores.</p>
+    <!-- SECTION: CONTACT -->
+    <section class="container contact py-5">
+        <div class="row text-center">
+            <div class="col-12">
+                <h2 class="big-title text-center" data-title="รายละเอียด">รายละเอียด</h2>
+            </div>
+            <div class="col-sm-4 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <i class="fas fa-map-marker-alt fa-3x py-2"></i>
+                        <h4 class="card-title">ที่อยู่</h4>
+                        <p class="card-text">สุรินทร์ อ.เมือง ต.ในเมือง</p>
+                    </div>
                 </div>
-                <div class="col-12 col-md-4 py-4">
-                    <i class="fas fa-shipping-fast fa-4x mb-3"></i>
-                    <h3>shipping fast</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus inventore, nesciunt quidem qui quasi enim eaque nemo quod ipsam maiores.</p>
+            </div>
+            <div class="col-sm-4 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <i class="fas fa-phone-alt fa-3x py-2"></i>
+                        <h4 class="card-title">เบอร์โทรศัพท์</h4>
+                        <p class="card-text">(+66)89-9999999</p>
+                    </div>
                 </div>
-                <div class="col-12 col-md-4 py-4">
-                    <i class="fas fa-money-check-alt fa-4x mb-3"></i>
-                    <h3>low-priced</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus inventore, nesciunt quidem qui quasi enim eaque nemo quod ipsam maiores.</p>
+            </div>
+            <div class="col-sm-4 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <i class="fas fa-envelope fa-3x py-2"></i>
+                        <h4 class="card-title">อีเมล์</h4>
+                        <p class="card-text">example@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">แบบฟอร์มติดต่อเรา</h5>
+                        <form action="contact.php" method="POST">
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="name">ชื่อ</label>
+                                    <input type="text" name="name" id="name" class="form-control" placeholder="ชื่อของคุณ">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="phone">เบอร์โทรศัพท์</label>
+                                    <input type="number" name="phone" id="phone" class="form-control" placeholder="เบอร์โทรศัพท์">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="email">อีเมล์</label>
+                                    <input type="email" name="email" id="email" class="form-control" placeholder="example@gmali.com">
+                                </div>
+                            </div>
+                                <div class="form-group">
+                                    <label for="msg">ข้อความของคุณ</label>
+                                    <textarea name="msg" id="msg" rows="5" class="form-control" placeholder="เขียนข้อความของคุณที่นี่"></textarea>
+                                </div>
+                                <div id="recaptcha-wrapper" class="text-center mb-2">
+                                    <div class="g-recaptcha d-inline-block" data-sitekey="6LdEHMMUAAAAAE3KkT851bgYp-MvfjojDaSJrH-W"></div>
+                                </div>
+                                <button type="submit" class="btn my-btn d-block mx-auto submit">ส่งข้อความ</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION: BLOG -->
-    <section id="blog" class="container py-5">
-            <h2 class="big-title text-center" data-title="blog">blog</h2>
+
+    <!-- SECTION: ABOUT -->
+    <section class="jarallax about-title position-relative py-7" data-jarallax='{ "speed": 0.5 }'
+        style="background-image: url('assets/images/photographe-evjf-greg--WQQ1-Fdbqk-unsplash.jpg');">
+        <div class="container">
             <div class="row">
-                <div class="col-12 col-sm-6 col-md-4 p-2">
-                    <div class="card h-100">
-                        <a href="#" class="warpper-card-img">
-                            <img src="assets/images/blog-img/brandless-a7PzXKoZLOU-unsplash.jpg" class="card-img-top">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="col-12 text-center page-title-inner">
+                    <h1 class="display-2 brand-text">Shop Shop</h1>
+                    <div class="star-rating">
+                        <span>☆</span>
+                        <span>☆</span>
+                        <span>☆</span>
+                        <span>☆</span>
+                        <span>☆</span>
+                        <div class="star-inner" style="width: 100%;">
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
                         </div>
-                            <div class="p-3">
-                                <a href="#" class="btn btn-block my-btn">อ่านเพิ่มเติม...</a>
-                            </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 p-2">
-                    <div class="card h-100">
-                        <a href="#" class="warpper-card-img">
-                            <img src="assets/images/blog-img/freestocks-org-fplnXE5loWo-unsplash.jpg" class="card-img-top">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                            <div class="p-3">
-                                <a href="#" class="btn btn-block my-btn">อ่านเพิ่มเติม...</a>
-                            </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 p-2">
-                    <div class="card h-100">
-                        <a href="#" class="warpper-card-img">
-                            <img src="assets/images/blog-img/manu-camargo-BkaD07QEiJc-unsplash.jpg" class="card-img-top">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                            <div class="p-3">
-                                <a href="#" class="btn btn-block my-btn">อ่านเพิ่มเติม...</a>
-                            </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 p-2">
-                    <div class="card h-100">
-                        <a href="#" class="warpper-card-img">
-                            <img src="assets/images/blog-img/raphael-lovaski-DEuob2v77wI-unsplash.jpg" class="card-img-top">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                            <div class="p-3">
-                                <a href="#" class="btn btn-block my-btn">อ่านเพิ่มเติม...</a>
-                            </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 p-2">
-                    <div class="card h-100">
-                        <a href="#" class="warpper-card-img">
-                            <img src="assets/images/blog-img/the-honest-company-oqmIM9bkAWQ-unsplash.jpg" class="card-img-top">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                            <div class="p-3">
-                                <a href="#" class="btn btn-block my-btn">อ่านเพิ่มเติม...</a>
-                            </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 p-2">
-                    <div class="card h-100">
-                        <a href="#" class="warpper-card-img">
-                            <img src="assets/images/blog-img/hanna-P_gQpl-a_R4-unsplash.jpg" class="card-img-top">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, excepturi.</p>
-                        </div>
-                            <div class="p-3">
-                                <a href="#" class="btn btn-block my-btn">อ่านเพิ่มเติม...</a>
-                            </div>
                     </div>
                 </div>
             </div>
+        </div>
     </section>
+
 
     <!-- SECTION: FOOTER -->
     <section class="my-footer pt-5 px-5 text-center text-md-left">
@@ -297,8 +245,7 @@
                                 <li><i class="fas fa-map-marker-alt mr-2"></i>
                                     <span> 11600 New Petchaburi Rd, Ratchathewi Area, Surin, Thailand</span>
                                 </li>
-                                <li><a href="tel:099999999"><i class="fas fa-phone-alt mr-2"></i></a><span> (+66)
-                                        89-9999999</span>
+                                <li><a href="tel:099999999"><i class="fas fa-phone-alt mr-2"></i></a><span> (+66) 89-9999999</span>
                                 </li>
                                 <li><a href="mailto:panyafuang@gmail.com"><i class="fas fa-envelope mr-2"></i></a><span>
                                         example@gmail.com</span></li>
@@ -322,20 +269,70 @@
         </div>
     </footer>
 
-    <!-- SECTION: TO TOP -->
-    <div class="to-top" id="scrollme">
-        <i class="fas fa-angle-up"></i>
-    </div>
+     <!-- SECTION: TO TOP -->
+     <div class="to-top" id="scrollme">
+         <i class="fas fa-angle-up"></i>
+     </div>
 
     <!-- jQuery -->
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <!-- Popper.js -->
-    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <!-- Bootstrap js -->
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- Font awesome -->
     <script src="https://kit.fontawesome.com/d8ef0f1bbc.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap js -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Popper.js -->
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/d8ef0f1bbc.js" crossorigin="anonymous"></script>
+    <!-- Jarallax -->
+    <script src="node_modules/jarallax/dist/jarallax.min.js"></script>
+    <!-- Facebook Comment -->
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v5.0">
+    </script>
+    <!-- Recaptcha v2 -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <!-- main.js -->
     <script src="assets/js/main.js"></script>
+
+    <script>
+        // reCaptcha v2 //
+        $(function(){
+            // global variables
+            captchaResized = false;
+            captchaWidth = 304;
+            captchaHeight = 78;
+            captchaWrapper = $('#recaptcha-wrapper');
+            captchaElements = $('#rc-imageselect, .g-recaptcha');
+
+            $(window).on('resize', function() {
+            resizeCaptcha();
+            });
+
+            resizeCaptcha();
+        });
+
+        function resizeCaptcha() {
+            if (captchaWrapper.width() >= captchaWidth) {
+                if (captchaResized) {
+                    captchaElements.css('transform', '').css('-webkit-transform', '').css('-ms-transform', '').css('-o-transform',
+                    '').css('transform-origin', '').css('-webkit-transform-origin', '').css('-ms-transform-origin',
+                    '').css('-o-transform-origin', '');
+                    captchaWrapper.height(captchaHeight);
+                    captchaResized = false;
+                }
+            } else {
+                var scale = (1 - (captchaWidth - captchaWrapper.width()) * (0.05/15));
+                captchaElements.css('transform', 'scale('+scale+')').css('-webkit-transform',
+                'scale('+scale+')').css('-ms-transform', 'scale('+scale+')').css('-o-transform',
+                'scale('+scale+')').css('transform-origin', '0 0').css('-webkit-transform-origin', '0 0')
+                .css('-ms-transform-origin', '0 0').css('-o-transform-origin', '0 0');
+                captchaWrapper.height(captchaHeight * scale);
+                if (captchaResized == false) captchaResized = true;
+            }
+        }
+        // resizeCaptcha();
+
+    </script>
 </body>
+
 </html>

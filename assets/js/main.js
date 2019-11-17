@@ -53,3 +53,11 @@ $(function () {
             scrollTo(element, to, duration - 10);
         }, 10);
     }
+
+
+//
+// ─── GET FULLYEAR ───────────────────────────────────────────────────────────────
+//
+
+    let currYear = new Date().getFullYear();
+    document.querySelector('.year').innerHTML = currYear;

@@ -46,7 +46,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-alpha fixed-top navExpand">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="assets/image/logo.png" width="35px" height="35px" class="d-inline-block align-top">
+                <img src="assets/images/logo.png" width="35px" height="35px" class="d-inline-block align-top">
                 &nbsp;Panyafuang
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -79,7 +79,7 @@
 
     <!-- SECTION: PAGE TITLE -->
     <header class="jarallax page-title" data-jarallax='{ "speed": 0.5 }'
-        style="background-image: url('assets/image/contact.jpg');">
+        style="background-image: url('assets/images/contact.jpg');">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center page-title-inner">
@@ -160,7 +160,7 @@
 
     <!-- SECTION: ABOUT -->
     <section class="jarallax about-title position-relative py-7" data-jarallax='{ "speed": 0.5 }'
-        style="background-image: url('assets/image/photographe-evjf-greg--WQQ1-Fdbqk-unsplash.jpg');">
+        style="background-image: url('assets/images/photographe-evjf-greg--WQQ1-Fdbqk-unsplash.jpg');">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center page-title-inner">
@@ -268,9 +268,6 @@
     <script src="assets/js/main.js"></script>
 
     <script>
-        let currYear = new Date().getFullYear();
-        document.querySelector('.year').innerHTML = currYear;
-
         grecaptcha.ready(function () {
                 grecaptcha.execute('<?php echo SITE_KEY; ?>', {
                 action: 'homepage'
