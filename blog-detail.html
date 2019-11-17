@@ -45,7 +45,7 @@
                         <a class="nav-link" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Content</a>
+                        <a class="nav-link" href="contact.php">Content</a>
                     </li>
 
                 </ul>
@@ -66,7 +66,7 @@
     <section class="container blog-card">
         <div class="row">
             <div class="col-12">
-                <h1>Lips Content</h1>
+                <h1 class="text-center">Lips Content</h1>
                 <p><img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"
                         style="float:right" /> As
                     the creators of a highly popular WYSIWYG rich text editor,&nbsp;<a
@@ -105,9 +105,7 @@
                             </a>
                             <div class="card-body">
                                 <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of
-                                    the card's content.</p>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates iste, alias accusamus vel saepe enim necessitatibus ratione voluptas itaque maiores minima commodi assumenda laborum sunt illo fugiat laudantium aspernatur, ipsum odio quibusdam eum dolorem dolore quaerat. Voluptatem libero quis iusto ut nostrum fugiat recusandae earum, error eligendi. Laudantium, quis corporis.</p>
                             </div>
                             <div class="p-3">
                                 <a href="#" class="btn btn-block my-btn">อ่านเพิ่มเติม...</a>
@@ -201,20 +199,22 @@
         style="background-image: url('assets/image/photographe-evjf-greg--WQQ1-Fdbqk-unsplash.jpg');">
         <div class="container">
             <div class="row">
-                <div class="col-12 text-center page-title-inner">
-                    <h1 class="display-2 brand-text">Shop Shop</h1>
-                    <div class="star-rating">
-                        <span>☆</span>
-                        <span>☆</span>
-                        <span>☆</span>
-                        <span>☆</span>
-                        <span>☆</span>
-                        <div class="star-inner" style="width: 100%;">
-                            <span>★</span>
-                            <span>★</span>
-                            <span>★</span>
-                            <span>★</span>
-                            <span>★</span>
+                <div class="col-12 d-flex">
+                    <div class="page-title-content">
+                        <h1 class="display-2 brand-text">Shop Shop</h1>
+                        <div class="star-rating">
+                            <span>☆</span>
+                            <span>☆</span>
+                            <span>☆</span>
+                            <span>☆</span>
+                            <span>☆</span>
+                            <div class="star-inner" style="width: 100%;">
+                                <span>★</span>
+                                <span>★</span>
+                                <span>★</span>
+                                <span>★</span>
+                                <span>★</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -309,6 +309,31 @@
     <script>
         let currYear = new Date().getFullYear();
         document.querySelector('.year').innerHTML = currYear;
+
+        //
+        // ─── OWL CAROUSEL ───────────────────────────────────────────────────────────────
+        //
+
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+            loop: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: false
+                    },
+                    600: {
+                        items: 2,
+                        nav: false
+                    },
+                    1000: {
+                        items: 3,
+                        nav: false,
+                        loop: false
+                    }
+                }
+            });
+        });
     </script>
 </body>
 

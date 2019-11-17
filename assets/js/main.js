@@ -24,36 +24,32 @@ $(function () {
         var theModal = $(this).data("target"),
             videoSRC = $(this).attr("data-video"),
             videoSRCauto = videoSRC + "?modestbranding=1&rel=0&controls=0&showinfo=0&html5=1&autoplay=1";
-        $(theModal + ' iframe').attr('src', videoSRCauto);
-        $(theModal + ' button.close').click(function () {
+            $(theModal + ' iframe').attr('src', videoSRCauto);
+            $(theModal + ' button.close').click(function () {
             $(theModal + ' iframe').attr('src', videoSRC);
         });
     });
 });
 
 //
-// ─── OWL CAROUSEL ───────────────────────────────────────────────────────────────
+// ─── TO TOP ─────────────────────────────────────────────────────────────────────
 //
 
-    $(document).ready(function () {
-        $('.owl-carousel').owlCarousel({
-            loop: true,
-            responsive: {
-                0: {
-                    items: 1,
-                    nav: false
-                },
-                600: {
-                    items: 2,
-                    nav: false
-                },
-                1000: {
-                    items: 3,
-                    nav: false,
-                    loop: false
-                }
-            }
-        });
-    });
+    function runScroll() {
+        scrollTo(document.body, 0, 600);
+    }
+    var scrollme;
+    scrollme = document.querySelector("#scrollme");
+    scrollme.addEventListener("click", runScroll, false)
 
+    function scrollTo(element, to, duration) {
+        if (duration <= 0) return;
+        var difference = to - element.scrollTop;
+        var perTick = difference / duration * 10;
 
+        setTimeout(function () {
+            element.scrollTop = element.scrollTop + perTick;
+            if (element.scrollTop == to) return;
+            scrollTo(element, to, duration - 10);
+        }, 10);
+    }

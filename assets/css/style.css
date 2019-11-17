@@ -93,8 +93,6 @@
 }
 
 .my-btn {
-    /* width: 100%; */
-    /* padding: 5px 7px; */
     color: #FFF;
     background: var(--gold-color);
     border: 1px solid var(--dark-gold-color);
@@ -145,6 +143,27 @@
 
 .navShut {
     padding: 10px;
+}
+
+/* TO TOP */
+.to-top{
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background: var(--dark-gold-color);
+    color: var(--gold-color);
+    bottom: 2%;
+    right: 2%;
+    z-index: 9999;
+    border-radius: 50%;
+    font-size: 25px;
+    cursor: pointer;
+    text-align: center;
+    opacity: .5;
+    transition: opacity .4s;
+}
+.to-top:hover{
+    opacity: 1;
 }
 
 
@@ -385,15 +404,16 @@ footer div p{
     /* ★☆ */
     .star-rating{
         position: relative;
+        text-align: center;
         font-size: 2rem;
         color: var(--dark-gold-color);
         display: inline-block;
+        white-space: nowrap;
     }
     .star-inner{
         position: absolute;
         top: 0;
         color: var(--gold-color);
-        /* white-space: nowrap; */
         overflow: hidden;
     }
 
@@ -412,6 +432,10 @@ footer div p{
     /*
      * ─── BLOG-DETAIL PAGE ───────────────────────────────────────────────────────────
      */
+        .owl-carousel .card-body {
+            height: 170px;
+            overflow: hidden;
+        }
         .blog-card{
             top: -5rem;
             position: relative;
@@ -428,9 +452,15 @@ footer div p{
            color: #FFF;
        }
 
+       .page-title-content {
+          margin: auto;
+          text-align: center;
+       }
+       
+
 
        /*
-        * ─── SECTION CONTACT ────────────────────────────────────────────────────────────
+        * ─── CONTACT PAGE ────────────────────────────────────────────────────────────
         */
 
            .contact .fas{
@@ -502,6 +532,7 @@ footer div p{
          padding: 20px 8px;
          box-shadow: none;
     }
+    
 
 }
 

@@ -1,3 +1,29 @@
+<?php
+    define('SITE_KEY', '6LdBD8MUAAAAAHifvF4zIbpMEHGMrFcnW25NcQi0');
+    define('SECRET_KEY', '6LdBD8MUAAAAAMXBKH3BpmHKOelvqyYi2BwxEdKp');
+
+    if($_POST){
+        function getCaptcha($SecretKey){
+            // Let google check validation
+            $Response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".SECRET_KEY."&response={$SecretKey}");
+
+            // Decode JSON from google (convert json to array[key => value])
+            $Return = json_decode($Response);
+            return $Return;
+        }
+        // Assign value from getCaptcha func to $Return
+        $Return = getCaptcha($_POST['recaptchaV3']);
+ 
+        if($Return->success == true && $Return->score > 0.5){
+            echo "Successfully";
+        }else{
+            echo "You are robot!";
+        }
+    }
+    
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,10 +36,8 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Font awesome -->
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/d8ef0f1bbc.js" crossorigin="anonymous"></script>
-    <!-- Owl carousel -->
-    <link rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
-    <link rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.theme.default.min.css">
+    <!-- reCappcha v3 -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6LdBD8MUAAAAAHifvF4zIbpMEHGMrFcnW25NcQi0"></script>
     <title>Contact</title>
 </head>
 
@@ -105,7 +129,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">แบบฟอร์มติดต่อเรา</h5>
-                        <form action="">
+                        <form action="contact.php" method="POST">
                             <div class="form-row">
                                 <div class="form-group col-md-4">
                                     <label for="name">ชื่อ</label>
@@ -124,7 +148,8 @@
                                     <label for="msg">ข้อความของคุณ</label>
                                     <textarea name="msg" id="msg" rows="5" class="form-control" placeholder="เขียนข้อความของคุณที่นี่"></textarea>
                                 </div>
-                                <button type="submit" class="btn my-btn d-block mx-auto">ส่งข้อความ</button>
+                                <input type="hidden" name="recaptchaV3" id="recaptchaV3">
+                                <button type="submit" class="btn my-btn d-block mx-auto submit">ส่งข้อความ</button>
                         </form>
                     </div>
                 </div>
@@ -228,14 +253,14 @@
 
     <!-- jQuery -->
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/d8ef0f1bbc.js" crossorigin="anonymous"></script>
     <!-- Bootstrap js -->
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- Popper.js -->
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <!-- Jarallax -->
     <script src="node_modules/jarallax/dist/jarallax.min.js"></script>
-    <!-- Owl carousel -->
-    <script src="/node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
     <!-- Facebook -->
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v5.0">
     </script>
@@ -245,6 +270,14 @@
     <script>
         let currYear = new Date().getFullYear();
         document.querySelector('.year').innerHTML = currYear;
+
+        grecaptcha.ready(function () {
+                grecaptcha.execute('<?php echo SITE_KEY; ?>', {
+                action: 'homepage'
+            }).then(function (token) {
+                document.getElementById('recaptchaV3').value = token;
+            });
+        });
     </script>
 </body>
 
