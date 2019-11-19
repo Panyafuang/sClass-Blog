@@ -282,7 +282,7 @@ footer div p{
 
     /* SECTION: ABOUT */
     .vdo-about {
-        background: url('../image/matheus-ferrero-F7JUUpOejr8-unsplash.jpg') center no-repeat;
+        background: url('../images/matheus-ferrero-F7JUUpOejr8-unsplash.jpg') center no-repeat;
         background-size: cover;
         height: 600px;
         display: flex;
@@ -370,6 +370,9 @@ footer div p{
         float: left;
         text-align: right;
         padding: 0 10px;
+    }
+    li > .timeline-card h5{
+        color: var(--dark-gold-color);
     }
     li.inverted > .timeline-card{
         float: right;

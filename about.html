@@ -162,7 +162,7 @@
                              <p>March 2010</p>
                         </div>
                          <div class="timeline-card">
-                             <h5>วันก่อตั้ง</h5>
+                             <h5>ก่อตั้งเมื่อ</h5>
                              <p class="text-muted">7 ธันวาคม 2010 Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio natus, velit ipsum.</p>
                          </div>
                      </li>
@@ -171,7 +171,7 @@
                              <p>July 2013</p>
                         </div>
                          <div class="timeline-card">
-                             <h5>ขยายสาขา</h5>
+                             <h5>ขยาย 7 สาขา</h5>
                              <p class="text-muted">7 ธันวาคม 2010 Lorem ipsum dolor sit amet consectetur adipisicing.</p>
                          </div>
                      </li>
@@ -314,8 +314,18 @@
     <script src="assets/js/main.js"></script>
 
     <script>
-        let currYear = new Date().getFullYear();
-        document.querySelector('.year').innerHTML = currYear;
+        $(function () {
+        // Auto play modal video
+            $(".video").click(function () {
+                var theModal = $(this).data("target"),
+                    videoSRC = $(this).attr("data-video"),
+                    videoSRCauto = videoSRC + "?modestbranding=1&rel=0&controls=0&showinfo=0&html5=1&autoplay=1";
+                    $(theModal + ' iframe').attr('src', videoSRCauto);
+                    $(theModal + ' button.close').click(function () {
+                        $(theModal + ' iframe').attr('src', videoSRC);
+                });
+            });
+        });
     </script>
 </body>
 
