@@ -1,97 +1,49 @@
+<?php
+    define('SITE_KEY', '6LdBD8MUAAAAAHifvF4zIbpMEHGMrFcnW25NcQi0');
+    define('SECRET_KEY', '6LdBD8MUAAAAAMXBKH3BpmHKOelvqyYi2BwxEdKp');
+
+    if($_POST){
+        function getCaptcha($SecretKey){
+            // Let google check validation
+            $Response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".SECRET_KEY."&response={$SecretKey}");
+
+            // Decode JSON from google (convert json to array[key => value])
+            $Return = json_decode($Response);
+            return $Return;
+        }
+        // Assign value from getCaptcha func to $Return
+        $Return = getCaptcha($_POST['recaptchaV3']);
+ 
+        if($Return->success == true && $Return->score > 0.5){
+            echo "Successfully";
+        }else{
+            echo "You are robot!";
+        }
+    }
+    
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <!--number-based width or "device-width"-->
-    <meta name="viewport" content="width=320, initial-scale=1, maximum-scale=1, user-scalable=0" />
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>TP | เครื่องสำอางค์</title>
-
-    <!-- COMMON TAGS -->
-    <!-- Search Engine -->
-    <meta name="description"
-        content="ช้อปออนไลน์ สุดยอดสินค้าขายดี แบรนด์ดังเพียบ ของแท้ 100% เช็คโปรโมชั่น เมคอัพ สุดคุ้ม อัพเดทเทรนใหม่ก่อนใคร เฉพาะที่นี่ที่เดียว ออนไลน์">
-    <meta name="keywords" content="เครื่องสำอางค์, เมคอัพ">
-    <meta name="title" content="ขายเครื่องสำอางค์ รีวิวเครื่องสำอางค์">
-    <meta name="robots" content="index, follow">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="language" content="English">
-    <meta name="author" content="Panyafuang">
-    <meta name="image"
-        content="https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
-    <!-- Schema.org for Google -->
-    <meta itemprop="name" content="TP | เครื่องสำอางค์">
-    <meta itemprop="description"
-        content="ช้อปออนไลน์ สุดยอดสินค้าขายดี แบรนด์ดังเพียบ ของแท้ 100% เช็คโปรโมชั่น เมคอัพ สุดคุ้ม อัพเดทเทรนใหม่ก่อนใคร เฉพาะที่นี่ที่เดียว ออนไลน์">
-    <meta itemprop="image"
-        content="https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
-    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
-    <meta name="og:title" content="TP | เครื่องสำอางค์">
-    <meta name="og:description"
-        content="ช้อปออนไลน์ สุดยอดสินค้าขายดี แบรนด์ดังเพียบ ของแท้ 100% เช็คโปรโมชั่น เมคอัพ สุดคุ้ม อัพเดทเทรนใหม่ก่อนใคร เฉพาะที่นี่ที่เดียว ออนไลน์">
-    <meta name="og:image"
-        content="https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
-    <meta name="og:url" content="https://blog-1706d.web.app/">
-    <meta name="og:site_name" content="https://blog-1706d.web.app/">
-    <meta name="og:type" content="website">
-
-
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
-    <link rel="manifest" href="assets/images/favicons/site.webmanifest">
-    <link rel="mask-icon" href="assets/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="assets/images/favicons/favicon.ico">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-config" content="assets/images/favicons/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-
-
     <!-- Bootstrap -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Font awesome -->
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <!-- reCappcha v3 -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6LdBD8MUAAAAAHifvF4zIbpMEHGMrFcnW25NcQi0"></script>
+    <title>Contact</title>
 </head>
 
 <body>
     <!-- NAV -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-alpha fixed-top navExpand">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="assets/images/logo.png" width="35px" height="35px" class="d-inline-block align-top">
-                &nbsp;Panyafuang
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto text-center">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Shop</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="contact.html">Content</a>
-                    </li>
-
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <?php include_once('includes/navbar.php'); ?>
 
     <!-- SECTION: PAGE TITLE -->
     <header class="jarallax page-title" data-jarallax='{ "speed": 0.5 }'
@@ -164,9 +116,7 @@
                                     <label for="msg">ข้อความของคุณ</label>
                                     <textarea name="msg" id="msg" rows="5" class="form-control" placeholder="เขียนข้อความของคุณที่นี่"></textarea>
                                 </div>
-                                <div id="recaptcha-wrapper" class="text-center mb-2">
-                                    <div class="g-recaptcha d-inline-block" data-sitekey="6LdEHMMUAAAAAE3KkT851bgYp-MvfjojDaSJrH-W"></div>
-                                </div>
+                                <input type="hidden" name="recaptchaV3" id="recaptchaV3">
                                 <button type="submit" class="btn my-btn d-block mx-auto submit">ส่งข้อความ</button>
                         </form>
                     </div>
@@ -219,19 +169,19 @@
                 <h5 class="mb-3">menu</h5>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Shop</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Blog.html">Blog</a>
+                        <a class="nav-link" href="Blog.php">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link" href="about.php">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="contact.php">Contact</a>
                     </li>
 
                 </ul>
@@ -269,11 +219,6 @@
         </div>
     </footer>
 
-     <!-- SECTION: TO TOP -->
-     <div class="to-top" id="scrollme">
-         <i class="fas fa-angle-up"></i>
-     </div>
-
     <!-- jQuery -->
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <!-- Font awesome -->
@@ -282,56 +227,22 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- Popper.js -->
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <!-- Font awesome -->
-    <script src="https://kit.fontawesome.com/d8ef0f1bbc.js" crossorigin="anonymous"></script>
     <!-- Jarallax -->
     <script src="node_modules/jarallax/dist/jarallax.min.js"></script>
-    <!-- Facebook Comment -->
+    <!-- Facebook -->
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v5.0">
     </script>
-    <!-- Recaptcha v2 -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <!-- main.js -->
     <script src="assets/js/main.js"></script>
 
     <script>
-        // reCaptcha v2 //
-        $(function(){
-            // global variables
-            captchaResized = false;
-            captchaWidth = 304;
-            captchaHeight = 78;
-            captchaWrapper = $('#recaptcha-wrapper');
-            captchaElements = $('#rc-imageselect, .g-recaptcha');
-
-            $(window).on('resize', function() {
-            resizeCaptcha();
+        grecaptcha.ready(function () {
+                grecaptcha.execute('<?php echo SITE_KEY; ?>', {
+                action: 'homepage'
+            }).then(function (token) {
+                document.getElementById('recaptchaV3').value = token;
             });
-
-            resizeCaptcha();
         });
-
-        function resizeCaptcha() {
-            if (captchaWrapper.width() >= captchaWidth) {
-                if (captchaResized) {
-                    captchaElements.css('transform', '').css('-webkit-transform', '').css('-ms-transform', '').css('-o-transform',
-                    '').css('transform-origin', '').css('-webkit-transform-origin', '').css('-ms-transform-origin',
-                    '').css('-o-transform-origin', '');
-                    captchaWrapper.height(captchaHeight);
-                    captchaResized = false;
-                }
-            } else {
-                var scale = (1 - (captchaWidth - captchaWrapper.width()) * (0.05/15));
-                captchaElements.css('transform', 'scale('+scale+')').css('-webkit-transform',
-                'scale('+scale+')').css('-ms-transform', 'scale('+scale+')').css('-o-transform',
-                'scale('+scale+')').css('transform-origin', '0 0').css('-webkit-transform-origin', '0 0')
-                .css('-ms-transform-origin', '0 0').css('-o-transform-origin', '0 0');
-                captchaWrapper.height(captchaHeight * scale);
-                if (captchaResized == false) captchaResized = true;
-            }
-        }
-        // resizeCaptcha();
-
     </script>
 </body>
 

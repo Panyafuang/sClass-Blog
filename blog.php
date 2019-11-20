@@ -59,147 +59,131 @@
 
 <body>
     <!-- NAV -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-alpha fixed-top navExpand">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="assets/images/logo.png" width="35px" height="35px" class="d-inline-block align-top">
-                &nbsp;Panyafuang
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto text-center">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Shop</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blog</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Content</a>
-                    </li>
-
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <?php include_once('includes/navbar.php'); ?>
 
     <!-- SECTION: PAGE TITLE -->
     <header class="jarallax page-title" data-jarallax='{ "speed": 0.5 }' style="background-image: url('assets/images/the-honest-company-wf7h0NmE1TM-unsplash.jpg');">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center page-title-inner">
-                    <h1 class="display-2 brand-text">about us</h1>
+                    <h1 class="display-2 brand-text">Blogs</h1>
                     <p class="lead">Fugiat iure blanditiis nihil consequuntur quibusdam recusandae sequi quaerat veritatis,</p>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- SECTION: TODO -->
-    <section class="container">
-        <div class="row">
-            <!-- VIDEO SECTION -->
-            <div id="video-play" class="col-lg-5 col-md-6 vdo-about">
-                <div class="vdo-wrapper">
-                    <a href="#" class="video" data-video="https://www.youtube.com/embed/DRlheEbsM5U"
-                        data-toggle="modal" data-target="#videoModal">
-                        <i class="fas fa-play fa-5x"></i>
+    <!-- SECTION: BLOG -->
+    <div class="container py-5">
+        <div class="row pb-4">
+            <div class="col-12">
+                <div class="my-btn-group text-center">
+                    <a href="blog.php?tag=all">
+                        <button class="btn my-btn my-btn-active">All</button>
                     </a>
-                    <h3 class="pt-3">See What We Do</h3>
+                    <button class="btn my-btn">Blows</button>
+                    <button class="btn my-btn">Eyeliner</button>
+                    <button class="btn my-btn">Lip</button>
+                    <button class="btn my-btn">Waxing</button>
+                    <button class="btn my-btn">Makeup</button>
                 </div>
             </div>
-            <!-- VIDEO MODAL -->
-            <div class="modal fade" id="videoModal">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-body">
-                            <button class="close" data-dismiss="modal">
-                                <span>&times;</span>
-                            </button>
-                            <iframe src="" frameborder="0" width="100%" height="350px"></iframe>
-                        </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-4 p-2">
+                <div class="card h-100">
+                    <a href="blog-detail.php" class="warpper-card-img">
+                        <img src="assets/images/blog-img/the-honest-company-oqmIM9bkAWQ-unsplash.jpg" class="card-img-top">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Lips Content</h5>
+                        <p class="card-text">As the creators of a highly popular WYSIWYG rich text editor,</p>
+                    </div>
+                    <div class="p-3">
+                        <a href="blog-detail.php" class="btn btn-block my-btn">อ่านเพิ่มเติม...</a>
                     </div>
                 </div>
             </div>
-
-            <!-- Content -->
-            <div class="col-lg-7 col-md-6 py-4 content-about">
-                <h3 class="display-4">online</h3>
-                <h3 class="display-4">fashion shop</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita excepturi corrupti totam voluptates sunt ea officiis nihil nemo natus nostrum rerum in odit necessitatibus minus, itaque nobis ipsum sed et? Delectus quae blanditiis, impedit quod consequuntur</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque sit, odio pariatur praesentium libero odit excepturi iure incidunt atque quo omnis, architecto adipisci similique suscipit, natus sint aliquid consequatur saepe.</p>
+            <div class="col-12 col-sm-6 col-md-4 p-2">
+                <div class="card h-100">
+                    <a href="#" class="warpper-card-img">
+                        <img src="assets/images/blog-img/freestocks-org-fplnXE5loWo-unsplash.jpg" class="card-img-top">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                    <div class="p-3">
+                        <a href="#" class="btn btn-block my-btn">อ่านเพิ่มเติม...</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 p-2">
+                <div class="card h-100">
+                    <a href="#" class="warpper-card-img">
+                        <img src="assets/images/blog-img/manu-camargo-BkaD07QEiJc-unsplash.jpg" class="card-img-top">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                    <div class="p-3">
+                        <a href="#" class="btn btn-block my-btn">อ่านเพิ่มเติม...</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 p-2">
+                <div class="card h-100">
+                    <a href="#" class="warpper-card-img">
+                        <img src="assets/images/blog-img/raphael-lovaski-DEuob2v77wI-unsplash.jpg" class="card-img-top">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                    <div class="p-3">
+                        <a href="#" class="btn btn-block my-btn">อ่านเพิ่มเติม...</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 p-2">
+                <div class="card h-100">
+                    <a href="#" class="warpper-card-img">
+                        <img src="assets/images/blog-img/the-honest-company-oqmIM9bkAWQ-unsplash.jpg"
+                            class="card-img-top">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                    <div class="p-3">
+                        <a href="#" class="btn btn-block my-btn">อ่านเพิ่มเติม...</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 p-2">
+                <div class="card h-100">
+                    <a href="#" class="warpper-card-img">
+                        <img src="assets/images/blog-img/hanna-P_gQpl-a_R4-unsplash.jpg" class="card-img-top">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere,
+                            excepturi.</p>
+                    </div>
+                    <div class="p-3">
+                        <a href="#" class="btn btn-block my-btn">อ่านเพิ่มเติม...</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
 
-     <!-- SECTION: TIMELINE -->
-     <section class="jarallax timeline-title position-relative py-5" data-jarallax='{ "speed": 0.5 }'
-         style="background-image: url('assets/images/joanna-kosinska-kKueFCypUk4-unsplash.jpg');">
-         <div class="container">
-             <div class="row">
-                 <div class="col-12 text-center page-title-inner">
-                     <h1 class="display-2 brand-text">Time line about us</h1>
-                 </div>
-             </div>
-         </div>
-     </section>
-     <section class="container py-5">
-         <div class="row">
-             <div class="col-12">
-                 <ul class="timeline">
-                     <li>
-                         <div class="timeline-badge">
-                             <p>March 2010</p>
-                        </div>
-                         <div class="timeline-card">
-                             <h5>ก่อตั้งเมื่อ</h5>
-                             <p class="text-muted">7 ธันวาคม 2010 Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio natus, velit ipsum.</p>
-                         </div>
-                     </li>
-                     <li class="inverted">
-                         <div class="timeline-badge">
-                             <p>July 2013</p>
-                        </div>
-                         <div class="timeline-card">
-                             <h5>ขยาย 7 สาขา</h5>
-                             <p class="text-muted">7 ธันวาคม 2010 Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                         </div>
-                     </li>
-                     <li>
-                         <div class="timeline-badge">
-                             <p>August 2015</p>
-                        </div>
-                         <div class="timeline-card">
-                             <h5>ขยายสาขา ภาคใต้</h5>
-                             <p class="text-muted">7 ธันวาคม 2010 Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                         </div>
-                     </li>
-                     <li class="inverted">
-                         <div class="timeline-badge">
-                             <p>December 2018 - Present</p>
-                        </div>
-                         <div class="timeline-card">
-                             <h5>ขายออนไลน์</h5>
-                             <p class="text-muted">7 ธันวาคม 2010 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate saepe facilis officiis ullam sequi deserunt minima hic, maiores error. In.</p>
-                         </div>
-                     </li>
-                     <li class="timeline-arrow">
-                         <i class="fas fa-chevron-down fa-2x"></i>
-                     </li>
-                 </ul>
-             </div>
-         </div>
-     </section>
 
     <!-- SECTION: ABOUT -->
     <section class="jarallax about-title position-relative py-7" data-jarallax='{ "speed": 0.5 }'
@@ -244,19 +228,19 @@
                 <h5 class="mb-3">menu</h5>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Shop</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Blog.html">Blog</a>
+                        <a class="nav-link" href="Blog.php">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link" href="about.php">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="contact.php">Contact</a>
                     </li>
 
                 </ul>
@@ -312,21 +296,6 @@
     <script src="node_modules/jarallax/dist/jarallax.min.js"></script>
     <!-- main.js -->
     <script src="assets/js/main.js"></script>
-
-    <script>
-        $(function () {
-        // Auto play modal video
-            $(".video").click(function () {
-                var theModal = $(this).data("target"),
-                    videoSRC = $(this).attr("data-video"),
-                    videoSRCauto = videoSRC + "?modestbranding=1&rel=0&controls=0&showinfo=0&html5=1&autoplay=1";
-                    $(theModal + ' iframe').attr('src', videoSRCauto);
-                    $(theModal + ' button.close').click(function () {
-                        $(theModal + ' iframe').attr('src', videoSRC);
-                });
-            });
-        });
-    </script>
 </body>
 
 </html>
