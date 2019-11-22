@@ -1,14 +1,9 @@
-<?php
-    $pathName = basename($_SERVER['SCRIPT_FILENAME'], '.php');
-
-
-
-?>
+<?php    $pathName = basename($_SERVER['SCRIPT_FILENAME'], '.php'); ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-alpha fixed-top navExpand">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="assets/images/logo.png" width="35px" height="35px" class="d-inline-block align-top">
-                &nbsp;Panyafuang
+                &nbsp;owlboss
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
