@@ -248,6 +248,9 @@ footer p{
 .my-footer a:hover{
     color: var(--gold-color);
 }
+.my-footer li a{
+    display: inline-block;
+}
 
 .my-footer .address-footer ul{
     list-style-type: none;
@@ -255,6 +258,10 @@ footer p{
 .my-footer .address-footer ul li{
     margin-bottom: 0.7rem;
 }
+.my-footer li.active a{
+    color: var(--gold-color);
+}
+
 
 /* FOOTER */
 footer{
