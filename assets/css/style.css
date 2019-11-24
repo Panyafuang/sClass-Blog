@@ -434,6 +434,9 @@ footer div p{
         .my-btn-group button{
             width: 100px;
             margin-bottom: 0.3rem;
+        }
+        .my-btn-group a{
+            text-decoration: none;
         }    
 
 

@@ -11,5 +11,6 @@
         exit();
     }
 
-
+    // Set prefix
+    $base_path_blog = 'assets/images/blog-img/';
 ?>

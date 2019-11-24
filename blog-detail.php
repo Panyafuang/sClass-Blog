@@ -4,9 +4,10 @@
     if(isset($_GET['id'])){
         $id = $_GET['id'];
 
-        $sql = "SELECT * FROM articles WHERE id = '".$id."' ";
+        $sql = "SELECT * FROM articles WHERE id = '".$id."' AND `status` = 'true' ";
         $result = $conn->query($sql) or die ($conn->error);
 
+        // Check having any data ?
         if($result->num_rows > 0){
             $row = $result->fetch_assoc();
         }else{
@@ -86,7 +87,7 @@
     <header class="jarallax" 
         data-jarallax='{ "speed": 0.5 }'
         style="
-            background-image: url('<?php echo $row['image'];?>');
+            background-image: url('<?php echo $base_path_blog.$row['image'];?>');
             background-size: cover;
         ">
             <div class="blog-image">
@@ -98,14 +99,17 @@
     <!-- SETCTION: BLOGS DETAIL -->
     <section class="container blog-card">
         <div class="row">
+            <!-- Show detail -->
             <div class="col-12">
                 <?php echo $row['detail']; ?>
             </div>
+            <!-- Date created -->
             <div class="col-12 text-right">
                 <hr>
                 <p class="text-muted"><?php echo date_format(new DateTime($row['updated_at']), "j F Y"); ?></p>
                 <div class="pw-server-widget" data-id="wid-db6fpslc"></div>
             </div>
+            <!-- Owl carousel -->
             <div class="col-12">
                 <div class="owl-carousel owl-theme">
                     <div class="col-12 p-2">
@@ -255,22 +259,15 @@
             });
         });
 
-        
-            //              DO NOT IMPLEMENT                //
-            //       this code through the following        //
-            //                                              //
-            //   Floodlight Pixel Manager                   //
-            //   DCM Pixel Manager                          //
-            //   Any system that places code in an iframe   //
-            (function () {
-                var s = document.createElement('script');
-                s.type = 'text/javascript';
-                s.async = true;
-                s.src = ('https:' == document.location.protocol ? 'https://s' : 'http://i') +
-                    '.po.st/static/v4/post-widget.js#publisherKey=rglpna5sudm3ipt4v6rk';
-                var x = document.getElementsByTagName('script')[0];
-                x.parentNode.insertBefore(s, x);
-            })();
+        (function () {
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = ('https:' == document.location.protocol ? 'https://s' : 'http://i') +
+                '.po.st/static/v4/post-widget.js#publisherKey=rglpna5sudm3ipt4v6rk';
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+        })();
     </script>
 </body>
 
