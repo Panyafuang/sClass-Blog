@@ -1,3 +1,12 @@
+<?php
+    require_once('php/connect.php');
+
+    // Find data in tb articles
+    $sql = "SELECT * FROM articles";
+    $result = $conn->query($sql) or die($conn->error);
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -81,106 +90,32 @@
                     <a href="blog.php?tag=all">
                         <button class="btn my-btn my-btn-active">All</button>
                     </a>
-                    <button class="btn my-btn">Blows</button>
+                    <button class="btn my-btn">Eyebrow</button>
                     <button class="btn my-btn">Eyeliner</button>
-                    <button class="btn my-btn">Lip</button>
+                    <button class="btn my-btn">Lips</button>
                     <button class="btn my-btn">Waxing</button>
                     <button class="btn my-btn">Makeup</button>
                 </div>
             </div>
         </div>
         <div class="row">
+        <?php while($row = $result->fetch_assoc()): ?>
             <div class="col-12 col-sm-6 col-md-4 p-2">
                 <div class="card h-100">
-                    <a href="blog-detail.php" class="warpper-card-img">
-                        <img src="assets/images/blog-img/the-honest-company-oqmIM9bkAWQ-unsplash.jpg" class="card-img-top">
+                    <a href="blog-detail.php?id=<?php echo $row['id'];?>" class="warpper-card-img">
+                        <img src="<?php echo $row['image'];?>" class="card-img-top">
                     </a>
                     <div class="card-body">
-                        <h5 class="card-title">Lips Content</h5>
-                        <p class="card-text">As the creators of a highly popular WYSIWYG rich text editor,</p>
+                        <h5 class="card-title"><?php echo htmlspecialchars($row['subject']);?></h5>
+                        <p class="card-text"><?php echo htmlspecialchars($row['sub_title']);?></p>
                     </div>
                     <div class="p-3">
                         <a href="blog-detail.php" class="btn btn-block my-btn">อ่านเพิ่มเติม...</a>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-4 p-2">
-                <div class="card h-100">
-                    <a href="#" class="warpper-card-img">
-                        <img src="assets/images/blog-img/freestocks-org-fplnXE5loWo-unsplash.jpg" class="card-img-top">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                    </div>
-                    <div class="p-3">
-                        <a href="#" class="btn btn-block my-btn">อ่านเพิ่มเติม...</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 p-2">
-                <div class="card h-100">
-                    <a href="#" class="warpper-card-img">
-                        <img src="assets/images/blog-img/manu-camargo-BkaD07QEiJc-unsplash.jpg" class="card-img-top">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                    </div>
-                    <div class="p-3">
-                        <a href="#" class="btn btn-block my-btn">อ่านเพิ่มเติม...</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 p-2">
-                <div class="card h-100">
-                    <a href="#" class="warpper-card-img">
-                        <img src="assets/images/blog-img/raphael-lovaski-DEuob2v77wI-unsplash.jpg" class="card-img-top">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                    </div>
-                    <div class="p-3">
-                        <a href="#" class="btn btn-block my-btn">อ่านเพิ่มเติม...</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 p-2">
-                <div class="card h-100">
-                    <a href="#" class="warpper-card-img">
-                        <img src="assets/images/blog-img/the-honest-company-oqmIM9bkAWQ-unsplash.jpg"
-                            class="card-img-top">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                    </div>
-                    <div class="p-3">
-                        <a href="#" class="btn btn-block my-btn">อ่านเพิ่มเติม...</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 p-2">
-                <div class="card h-100">
-                    <a href="#" class="warpper-card-img">
-                        <img src="assets/images/blog-img/hanna-P_gQpl-a_R4-unsplash.jpg" class="card-img-top">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere,
-                            excepturi.</p>
-                    </div>
-                    <div class="p-3">
-                        <a href="#" class="btn btn-block my-btn">อ่านเพิ่มเติม...</a>
-                    </div>
-                </div>
-            </div>
+        <?php endwhile; ?>
+            
         </div>
     </div>
 

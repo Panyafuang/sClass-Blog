@@ -77,7 +77,7 @@
     <section class="container blog-card">
         <div class="row">
             <div class="col-12">
-                <h1 class="text-center">Lips Content</h1>
+                <h1 class="text-center">Lips</h1>
                 <p><img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"
                         style="float:right" /> As
                     the creators of a highly popular WYSIWYG rich text editor,&nbsp;<a
