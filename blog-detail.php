@@ -5,7 +5,7 @@
         $id = $_GET['id'];
 
         $sql = "SELECT * FROM articles WHERE id = '".$id."' AND `status` = 'true' ";
-        $result = $conn->query($sql) or die ($conn->error);
+        $result = $conn->query($sql) or die($conn->error);
 
         // Check having any data ?
         if($result->num_rows > 0){
@@ -13,9 +13,17 @@
         }else{
             header('Location: blog.php');
         }
+    
+
+    //
+    // ─── QUERY FOR OWL CAROUSEL ─────────────────────────────────────────────────────
+    //
+
+        // Show random data
+        $sql_owl = "SELECT * FROM `articles` WHERE `status` = 'true' ORDER BY RAND() LIMIT 6";
+        $result_owl = $conn->query($sql_owl) or die($conn->error);
+
     }
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -112,89 +120,24 @@
             <!-- Owl carousel -->
             <div class="col-12">
                 <div class="owl-carousel owl-theme">
-                    <div class="col-12 p-2">
-                        <div class="card h-100">
-                            <a href="#" class="warpper-card-img">
-                                <img src="assets/images/blog-img/brandless-a7PzXKoZLOU-unsplash.jpg"
-                                    class="card-img-top">
-                            </a>
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates iste, alias accusamus vel saepe enim necessitatibus ratione voluptas itaque maiores minima commodi assumenda laborum sunt illo fugiat laudantium aspernatur, ipsum odio quibusdam eum dolorem dolore quaerat. Voluptatem libero quis iusto ut nostrum fugiat recusandae earum, error eligendi. Laudantium, quis corporis.</p>
+
+                    <?php  while($row_owl = $result_owl->fetch_assoc()): ?>
+                        <section class="col-12 p-2">
+                            <div class="card h-100">
+                                <a href="blog-detail.php?id=<?php echo $row_owl['id'];?>" class="warpper-card-img">
+                                    <img src="<?php echo $base_path_blog.$row_owl['image']; ?>" class="card-img-top">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title"><?php echo htmlspecialchars($row_owl['subject']);?></h5>
+                                    <p class="card-text"><?php echo htmlspecialchars($row_owl['sub_title']);?></p>
+                                </div>
+                                <div class="p-3">
+                                    <a href="blog-detail.php?id=<?php echo $row_owl['id'];?>"class="btn btn-block my-btn">อ่านเพิ่มเติม...</a>
+                                </div>
                             </div>
-                            <div class="p-3">
-                                <a href="#" class="btn btn-block my-btn">อ่านเพิ่มเติม...</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 p-2">
-                        <div class="card h-100">
-                            <a href="#" class="warpper-card-img">
-                                <img src="assets/images/blog-img/freestocks-org-fplnXE5loWo-unsplash.jpg"
-                                    class="card-img-top">
-                            </a>
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of
-                                    the card's content.</p>
-                            </div>
-                            <div class="p-3">
-                                <a href="#" class="btn btn-block my-btn">อ่านเพิ่มเติม...</a>
-                            </div>
-                        </div>
-                    </div>
-                     <div class="col-12 p-2">
-                         <div class="card h-100">
-                             <a href="#" class="warpper-card-img">
-                                 <img src="assets/images/blog-img/manu-camargo-BkaD07QEiJc-unsplash.jpg"
-                                     class="card-img-top">
-                             </a>
-                             <div class="card-body">
-                                 <h5 class="card-title">Card title</h5>
-                                 <p class="card-text">Some quick example text to build on the card title and make up the
-                                     bulk of
-                                     the card's content.</p>
-                             </div>
-                             <div class="p-3">
-                                 <a href="#" class="btn btn-block my-btn">อ่านเพิ่มเติม...</a>
-                             </div>
-                         </div>
-                     </div>
-                    <div class="col-12 p-2">
-                        <div class="card h-100">
-                            <a href="#" class="warpper-card-img">
-                                <img src="assets/images/blog-img/raphael-lovaski-DEuob2v77wI-unsplash.jpg"
-                                    class="card-img-top">
-                            </a>
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of
-                                    the card's content.</p>
-                            </div>
-                            <div class="p-3">
-                                <a href="#" class="btn btn-block my-btn">อ่านเพิ่มเติม...</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 p-2">
-                        <div class="card h-100">
-                            <a href="#" class="warpper-card-img">
-                                <img src="assets/images/blog-img/the-honest-company-oqmIM9bkAWQ-unsplash.jpg"
-                                    class="card-img-top">
-                            </a>
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of
-                                    the card's content.</p>
-                            </div>
-                            <div class="p-3">
-                                <a href="#" class="btn btn-block my-btn">อ่านเพิ่มเติม...</a>
-                            </div>
-                        </div>
-                    </div>
+                        </section>
+                    <?php endwhile; ?>
+
                 </div>
             </div>
             <!-- Facebook Comment -->

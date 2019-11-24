@@ -1,8 +1,8 @@
 <?php
     require_once('php/connect.php');
 
-    // Find data in tb articles
-    $sql = "SELECT * FROM `articles` WHERE `status` = 'true' LIMIT 6";
+    // Show data order by new
+    $sql = "SELECT * FROM( SELECT * FROM `articles` WHERE `status` = 'true' ) AS article ORDER BY id DESC LIMIT 6";
     $result = $conn->query($sql);
 
     // Check error
