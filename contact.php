@@ -68,7 +68,7 @@
             <div class="row">
                 <div class="col-12 text-center page-title-inner">
                     <h1 class="display-2 brand-text-thai">ข้อมูลการติดต่อ</h1>
-                    <p class="lead">Panyafuang Shop</p>
+                    <p class="lead">SurinStudio</p>
                 </div>
             </div>
         </div>
@@ -113,29 +113,31 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">แบบฟอร์มติดต่อเรา</h5>
-                        <form action="contact.php" method="POST">
+                        <form action="php/contact.php" method="POST">
                             <div class="form-row">
                                 <div class="form-group col-md-4">
                                     <label for="name">ชื่อ</label>
-                                    <input type="text" name="name" id="name" class="form-control" placeholder="ชื่อของคุณ">
+                                    <input type="text" name="name" id="name" class="form-control" placeholder="ชื่อของคุณ" required>
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="phone">เบอร์โทรศัพท์</label>
-                                    <input type="number" name="phone" id="phone" class="form-control" placeholder="เบอร์โทรศัพท์">
+                                    <input type="number" name="phone" id="phone" class="form-control" placeholder="เบอร์โทรศัพท์" required>
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="email">อีเมล์</label>
-                                    <input type="email" name="email" id="email" class="form-control" placeholder="example@gmali.com">
+                                    <input type="email" name="email" id="email" class="form-control" placeholder="example@gmali.com" required>
                                 </div>
                             </div>
                                 <div class="form-group">
-                                    <label for="msg">ข้อความของคุณ</label>
-                                    <textarea name="msg" id="msg" rows="5" class="form-control" placeholder="เขียนข้อความของคุณที่นี่"></textarea>
+                                    <label for="message">ข้อความของคุณ</label>
+                                    <textarea name="message" id="message" rows="5" class="form-control" placeholder="เขียนข้อความของคุณที่นี่" required></textarea>
                                 </div>
                                 <div id="recaptcha-wrapper" class="text-center mb-2">
-                                    <div class="g-recaptcha d-inline-block" data-sitekey="6LdEHMMUAAAAAE3KkT851bgYp-MvfjojDaSJrH-W"></div>
+                                    <div class="g-recaptcha d-inline-block" 
+                                    data-sitekey="6LdEHMMUAAAAAE3KkT851bgYp-MvfjojDaSJrH-W"
+                                    data-callback="checkCaptcha"></div>
                                 </div>
-                                <button type="submit" class="btn my-btn d-block mx-auto submit">ส่งข้อความ</button>
+                                <button type="submit" name="btn-submit" id="btn-submit" class="btn my-btn d-block mx-auto submit" disabled>ส่งข้อความ</button>
                         </form>
                     </div>
                 </div>
@@ -188,26 +190,38 @@
             resizeCaptcha();
         });
 
-        function resizeCaptcha() {
-            if (captchaWrapper.width() >= captchaWidth) {
-                if (captchaResized) {
-                    captchaElements.css('transform', '').css('-webkit-transform', '').css('-ms-transform', '').css('-o-transform',
-                    '').css('transform-origin', '').css('-webkit-transform-origin', '').css('-ms-transform-origin',
-                    '').css('-o-transform-origin', '');
-                    captchaWrapper.height(captchaHeight);
-                    captchaResized = false;
+        //
+        // ─── RESPONESIVE RECAPTCHA ───────────────────────────────────────
+        //
+
+            function resizeCaptcha() {
+                if (captchaWrapper.width() >= captchaWidth) {
+                    if (captchaResized) {
+                        captchaElements.css('transform', '').css('-webkit-transform', '').css('-ms-transform', '').css('-o-transform',
+                        '').css('transform-origin', '').css('-webkit-transform-origin', '').css('-ms-transform-origin',
+                        '').css('-o-transform-origin', '');
+                        captchaWrapper.height(captchaHeight);
+                        captchaResized = false;
+                    }
+                } else {
+                    var scale = (1 - (captchaWidth - captchaWrapper.width()) * (0.05/15));
+                    captchaElements.css('transform', 'scale('+scale+')').css('-webkit-transform',
+                    'scale('+scale+')').css('-ms-transform', 'scale('+scale+')').css('-o-transform',
+                    'scale('+scale+')').css('transform-origin', '0 0').css('-webkit-transform-origin', '0 0')
+                    .css('-ms-transform-origin', '0 0').css('-o-transform-origin', '0 0');
+                    captchaWrapper.height(captchaHeight * scale);
+                    if (captchaResized == false) captchaResized = true;
                 }
-            } else {
-                var scale = (1 - (captchaWidth - captchaWrapper.width()) * (0.05/15));
-                captchaElements.css('transform', 'scale('+scale+')').css('-webkit-transform',
-                'scale('+scale+')').css('-ms-transform', 'scale('+scale+')').css('-o-transform',
-                'scale('+scale+')').css('transform-origin', '0 0').css('-webkit-transform-origin', '0 0')
-                .css('-ms-transform-origin', '0 0').css('-o-transform-origin', '0 0');
-                captchaWrapper.height(captchaHeight * scale);
-                if (captchaResized == false) captchaResized = true;
             }
-        }
-        // resizeCaptcha();
+        
+
+        //
+        // ─── CHECK SUBMIT ────────────────────────────────────────────────
+        //
+
+            function checkCaptcha(){
+                document.querySelector('#btn-submit').disabled = false;
+            }
 
     </script>
 </body>
