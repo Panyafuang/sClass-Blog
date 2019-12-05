@@ -1,17 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC&display=swap');
-/* Thai font */
-@import url('https://fonts.googleapis.com/css?family=Kanit&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Dosis&display=swap');
 
 :root{
     --dark-color: #313131;
     --dark-ligning: #3A474E;
     --soft-dark-color: #9E9E9E;
-    --grey-color: #e9ecef;
+    --grey-color: #F8F9FA;
     --dark-gold-color: #bf9200;
     --gold-color: #e8b923;
+    --gold-light-color: #FFD740;
 }
 
 /*
@@ -29,7 +26,7 @@
  */
 
     html, body{
-        font-family: 'Roboto',sans-serif;
+        font-family: 'Dosis',sans-serif;
         height: 100%;
         overflow-x: hidden;
     }
@@ -43,18 +40,23 @@
  */
 
 .py-6{
-    padding: 6rem;
+    padding: 6rem 0;
 } 
 .py-7{
-    padding: 7rem;
+    padding: 7rem 0;
+}
+.p-5{
+    padding: 5rem;
+}
+.p-6{
+    padding: 6rem;
 }
 
 .bg-alpha{
-    background-color: rgba(0, 0, 0, .8);
+    background-color: rgba(0, 0, 0, .7);
 }
 
 .big-title{
-    font-family: "Lato",Arial,sans-serif;
     color: var(--dark-color);
     font-size: 3.3rem;
     position: relative;
@@ -70,7 +72,6 @@
     transform: translateX(-50%);
     width: 100%;
     height: 100%;
-    font-family: 'Lato',sans-serif;
     font-size: 6rem;
     font-weight: 900;
     color: rgba(0, 0, 0, 0.07);
@@ -79,14 +80,13 @@
 }
 
 .brand-text{
-    color: var(--gold-color);
-    /* font-family: 'Niconne',cursive; */
+    color: var(--gold-light-color);
     font-family: 'Amatic SC',cursive;
     font-weight: 300;
-    font-size: 6.4rem;
+    font-size: 6rem;
 }
 .brand-text-thai{
-    color: var(--gold-color);
+    color: var(--gold-light-color);
     /* font-family: 'Kanit',sans-serif; */
     font-weight: 300;
     font-size: 4rem;
@@ -142,7 +142,7 @@
 }
 
 .navShut {
-    padding: 10px;
+    padding: 7px;
 }
 
 /* TO TOP */
@@ -185,7 +185,6 @@
     background-size: cover;
     background-position: center;
     position: relative;
-    /* object-fit: cover; */
 }
 .carousel-img::before{
     content: '';
@@ -210,6 +209,9 @@
 /* SECTION: JUMBOTRON */
 #jumbotron .fas {
     color: var(--gold-color);
+}
+.my-jumbortron{
+    background: var(--grey-color);
 }
 
 /* SECTION: BLOG */
@@ -449,7 +451,7 @@ footer div p{
             height: 170px;
             overflow: hidden;
         }
-        .blog-card{
+        .blog-content{
             top: -5rem;
             position: relative;
             background: #FFF;
@@ -494,7 +496,7 @@ footer div p{
     /* INDEX PAGE  */
     .carousel-caption{
         position: absolute;
-        top: 45%;
+        top: 35%;
         left: 50%;
         transform: translateX(-50%);
         text-align: center;
@@ -540,10 +542,18 @@ footer div p{
     }
 
     /* BLOG DETAIL PAGE  */
-    .blog-card{
+    .blog-content{
          top: 0;
-         padding: 20px 8px;
+         padding: 20px 30px;
          box-shadow: none;
+    }
+    .blog-content h3{
+        text-align: center;
+    }
+
+    /* .ABOUT TITLE */
+    .about-title h2{
+        font-size: 5rem;
     }
     
 
@@ -560,11 +570,6 @@ footer div p{
     .carousel-caption p {
         font-size: 1.1rem;
     }
-
-    /* BLOG DETAIL PAGE  */
-     .blog-card{
-         padding: 40px 50px;
-     }
 
         
 }

@@ -30,38 +30,25 @@
 
 <head>
     <meta charset="UTF-8">
-    <!--number-based width or "device-width"-->
-    <meta property="viewport" content="width=320, initial-scale=1, maximum-scale=1, user-scalable=0" />
-    <!-- <meta property="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=320, initial-scale=1, maximum-scale=1, user-scalable=0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?php echo $row['subject'];?></title>
 
     <!-- COMMON TAGS -->
     <!-- Search Engine -->
-    <meta property="description"
-        content="<?php echo $row['sub_title'];?>">
-    <meta property="keywords" content="เครื่องสำอางค์, เมคอัพ">
-    <meta property="title" content="ขายเครื่องสำอางค์ รีวิวเครื่องสำอางค์">
-    <meta property="robots" content="index, follow">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta property="language" content="English">
-    <meta property="author" content="Panyafuang">
-    <meta property="image"
-        content="https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
-    <!-- Schema.org for Google -->
-    <meta property="name" content="TP | เครื่องสำอางค์">
-    <meta property="description"
-        content="<?php echo $row['sub_title'];?>">
-    <meta property="image"
-        content="https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
-    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
-    <meta property="og:title" content="TP | เครื่องสำอางค์">
-    <meta property="og:description"
-        content="<?php echo $row['sub_title'];?>">
-    <meta property="og:image"
-        content="https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
-    <meta property="og:url" content="https://blog-1706d.web.app/">
-    <meta property="og:site_name" content="https://blog-1706d.web.app/">
+    <meta name="description" content="<?php echo $row['sub_title'];?>">
+    <meta name="keywords" content="เครื่องสำอางค์, เมคอัพ">
+    <meta name="robots" content="index, nofollow">
+    <meta name="web_author" content="surinstudio">
+    <meta name="image" content="https://surinstudio.com/demo/<?php echo $base_path_blog.$row['image'];?>">
+
+<!-- Open Graph general (Facebook, Pinterest & Google+) -->
+    <meta property="fb:app_id" content="429847841295587" />
+    <meta property="og:title" content="<?php echo $row['subject'];?>">
+    <meta property="og:description" content="<?php echo $row['sub_title'];?>">
+    <meta property="og:image" content="https://surinstudio.com/demo/<?php echo $base_path_blog.$row['image'];?>">
+    <meta property="og:url" content="https://surinstudio.com/demo/blog-detail.php?id=<?php echo $id; ?>"> <!-- Path website -->
+    <meta property="og:site_name" content="https://surinstudio.com"> <!-- Domain name -->
     <meta property="og:type" content="website">
 
 
@@ -95,17 +82,17 @@
     <header class="jarallax" 
         data-jarallax='{ "speed": 0.5 }'
         style="
-            background-image: url('<?php echo $base_path_blog.$row['image'];?>');
+            background: url('<?php echo $base_path_blog.$row['image'];?>');
             background-size: cover;
-        ">
+            ">
             <div class="blog-image">
-                <h1 class="display-4 brand-text font-weight-bold"><?php echo $row['subject'];?></h1>
+                <h1 class="display-4 brand-text"><?php echo $row['subject'];?></h1>
                 <p class="lead"><?php echo $row['sub_title'];?></p>
             </div>
     </header>
 
     <!-- SETCTION: BLOGS DETAIL -->
-    <section class="container blog-card">
+    <section class="container blog-content">
         <div class="row">
             <!-- Show detail -->
             <div class="col-12">

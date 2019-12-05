@@ -7,49 +7,11 @@
     <meta name="viewport" content="width=320, initial-scale=1, maximum-scale=1, user-scalable=0" />
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>TP | เครื่องสำอางค์</title>
+    <title>SS | ขายเครื่องสำอางค์</title>
 
-    <!-- COMMON TAGS -->
-    <!-- Search Engine -->
-    <meta name="description"
-        content="ช้อปออนไลน์ สุดยอดสินค้าขายดี แบรนด์ดังเพียบ ของแท้ 100% เช็คโปรโมชั่น เมคอัพ สุดคุ้ม อัพเดทเทรนใหม่ก่อนใคร เฉพาะที่นี่ที่เดียว ออนไลน์">
-    <meta name="keywords" content="เครื่องสำอางค์, เมคอัพ">
-    <meta name="title" content="ขายเครื่องสำอางค์ รีวิวเครื่องสำอางค์">
-    <meta name="robots" content="index, follow">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="language" content="English">
-    <meta name="author" content="Panyafuang">
-    <meta name="image"
-        content="https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
-    <!-- Schema.org for Google -->
-    <meta itemprop="name" content="TP | เครื่องสำอางค์">
-    <meta itemprop="description"
-        content="ช้อปออนไลน์ สุดยอดสินค้าขายดี แบรนด์ดังเพียบ ของแท้ 100% เช็คโปรโมชั่น เมคอัพ สุดคุ้ม อัพเดทเทรนใหม่ก่อนใคร เฉพาะที่นี่ที่เดียว ออนไลน์">
-    <meta itemprop="image"
-        content="https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
-    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
-    <meta name="og:title" content="TP | เครื่องสำอางค์">
-    <meta name="og:description"
-        content="ช้อปออนไลน์ สุดยอดสินค้าขายดี แบรนด์ดังเพียบ ของแท้ 100% เช็คโปรโมชั่น เมคอัพ สุดคุ้ม อัพเดทเทรนใหม่ก่อนใคร เฉพาะที่นี่ที่เดียว ออนไลน์">
-    <meta name="og:image"
-        content="https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
-    <meta name="og:url" content="https://blog-1706d.web.app/">
-    <meta name="og:site_name" content="https://blog-1706d.web.app/">
-    <meta name="og:type" content="website">
-
-
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
-    <link rel="manifest" href="assets/images/favicons/site.webmanifest">
-    <link rel="mask-icon" href="assets/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="assets/images/favicons/favicon.ico">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-config" content="assets/images/favicons/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-
-
+    <!-- Meta tag -->
+    <?php include_once('includes/meta.php'); ?>
+    
     <!-- Bootstrap -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -63,12 +25,12 @@
 
     <!-- SECTION: PAGE TITLE -->
     <header class="jarallax page-title" data-jarallax='{ "speed": 0.5 }'
-        style="background-image: url('assets/images/contact.jpg');">
+        style="background-image: url('assets/images/the-honest-company-wf7h0NmE1TM-unsplash.jpg');">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center page-title-inner">
-                    <h1 class="display-2 brand-text-thai">ข้อมูลการติดต่อ</h1>
-                    <p class="lead">SurinStudio</p>
+                    <h1 class="display-2 brand-text">Contect Us</h1>
+                    <p class="lead">SURINSTUDIO</p>
                 </div>
             </div>
         </div>

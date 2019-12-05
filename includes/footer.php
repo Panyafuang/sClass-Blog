@@ -2,11 +2,11 @@
 
 <!-- SECTION: ABOUT -->
 <section class="jarallax about-title position-relative py-7" data-jarallax='{ "speed": 0.5 }'
-    style="background-image: url('assets/images/photographe-evjf-greg--WQQ1-Fdbqk-unsplash.jpg');">
+    style="background-image: url('assets/images/photographe-evjf-greg - WQQ1-Fdbqk-unsplash.jpg');">
     <div class="container">
         <div class="row">
-            <div class="col-12 text-center page-title-inner">
-                <h1 class="display-2 brand-text">Shop Shop</h1>
+            <div class="col-12 text-center">
+                <h2 class="display-4 brand-text">SURINSTUDIO</h2>
                 <div class="star-rating">
                     <span>☆</span>
                     <span>☆</span>
@@ -88,6 +88,6 @@
 
     <footer>
         <div>
-            <p>copyright &copy; <span class="year"></span> | ❤️ Panyafuang </p>
+            <p>copyright &copy; <span class="year"></span> | ❤️ surinstudio </p>
         </div>
     </footer>

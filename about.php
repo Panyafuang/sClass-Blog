@@ -7,48 +7,10 @@
     <meta name="viewport" content="width=320, initial-scale=1, maximum-scale=1, user-scalable=0" />
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>TP | เครื่องสำอางค์</title>
+    <title>SS | ขายเครื่องสำอางค์</title>
 
-    <!-- COMMON TAGS -->
-    <!-- Search Engine -->
-    <meta name="description"
-        content="ช้อปออนไลน์ สุดยอดสินค้าขายดี แบรนด์ดังเพียบ ของแท้ 100% เช็คโปรโมชั่น เมคอัพ สุดคุ้ม อัพเดทเทรนใหม่ก่อนใคร เฉพาะที่นี่ที่เดียว ออนไลน์">
-    <meta name="keywords" content="เครื่องสำอางค์, เมคอัพ">
-    <meta name="title" content="ขายเครื่องสำอางค์ รีวิวเครื่องสำอางค์">
-    <meta name="robots" content="index, follow">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="language" content="English">
-    <meta name="author" content="Panyafuang">
-    <meta name="image"
-        content="https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
-    <!-- Schema.org for Google -->
-    <meta itemprop="name" content="TP | เครื่องสำอางค์">
-    <meta itemprop="description"
-        content="ช้อปออนไลน์ สุดยอดสินค้าขายดี แบรนด์ดังเพียบ ของแท้ 100% เช็คโปรโมชั่น เมคอัพ สุดคุ้ม อัพเดทเทรนใหม่ก่อนใคร เฉพาะที่นี่ที่เดียว ออนไลน์">
-    <meta itemprop="image"
-        content="https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
-    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
-    <meta name="og:title" content="TP | เครื่องสำอางค์">
-    <meta name="og:description"
-        content="ช้อปออนไลน์ สุดยอดสินค้าขายดี แบรนด์ดังเพียบ ของแท้ 100% เช็คโปรโมชั่น เมคอัพ สุดคุ้ม อัพเดทเทรนใหม่ก่อนใคร เฉพาะที่นี่ที่เดียว ออนไลน์">
-    <meta name="og:image"
-        content="https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
-    <meta name="og:url" content="https://blog-1706d.web.app/">
-    <meta name="og:site_name" content="https://blog-1706d.web.app/">
-    <meta name="og:type" content="website">
-
-
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
-    <link rel="manifest" href="assets/images/favicons/site.webmanifest">
-    <link rel="mask-icon" href="assets/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="assets/images/favicons/favicon.ico">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-config" content="assets/images/favicons/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-
+    <!-- Meta tag -->
+    <?php include_once('includes/meta.php'); ?>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
@@ -65,7 +27,7 @@
     <header class="jarallax page-title" data-jarallax='{ "speed": 0.5 }' style="background-image: url('assets/images/the-honest-company-wf7h0NmE1TM-unsplash.jpg');">
         <div class="container">
             <div class="row">
-                <div class="col-12 text-center page-title-inner">
+                <div class="col-12 text-center">
                     <h1 class="display-2 brand-text">about us</h1>
                     <p class="lead">Fugiat iure blanditiis nihil consequuntur quibusdam recusandae sequi quaerat veritatis,</p>
                 </div>
@@ -74,7 +36,7 @@
     </header>
 
     <!-- SECTION: TODO -->
-    <section class="container">
+    <section>
         <div class="row">
             <!-- VIDEO SECTION -->
             <div id="video-play" class="col-lg-5 col-md-6 vdo-about">
@@ -101,9 +63,9 @@
             </div>
 
             <!-- Content -->
-            <div class="col-lg-7 col-md-6 py-4 content-about">
-                <h3 class="display-4">online</h3>
-                <h3 class="display-4">fashion shop</h3>
+            <div class="col-lg-7 col-md-6 p-5 content-about">
+                <h3 class="display-4 brand-text">online</h3>
+                <h3 class="display-4 brand-text">fashion shop</h3>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita excepturi corrupti totam voluptates sunt ea officiis nihil nemo natus nostrum rerum in odit necessitatibus minus, itaque nobis ipsum sed et? Delectus quae blanditiis, impedit quod consequuntur</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque sit, odio pariatur praesentium libero odit excepturi iure incidunt atque quo omnis, architecto adipisci similique suscipit, natus sint aliquid consequatur saepe.</p>
             </div>
@@ -111,11 +73,11 @@
     </section>
 
      <!-- SECTION: TIMELINE -->
-     <section class="jarallax timeline-title position-relative py-5" data-jarallax='{ "speed": 0.5 }'
-         style="background-image: url('assets/images/joanna-kosinska-kKueFCypUk4-unsplash.jpg');">
+     <section class="jarallax timeline-title position-relative p-5 page-title" data-jarallax='{ "speed": 0.5 }'
+         style="background-image: url('assets/images/title2.jpg');">
          <div class="container">
              <div class="row">
-                 <div class="col-12 text-center page-title-inner">
+                 <div class="col-12 text-center">
                      <h1 class="display-2 brand-text">Time line about us</h1>
                  </div>
              </div>
@@ -130,8 +92,8 @@
                              <p>March 2010</p>
                         </div>
                          <div class="timeline-card">
-                             <h5>ก่อตั้งเมื่อ</h5>
-                             <p class="text-muted">7 ธันวาคม 2010 Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio natus, velit ipsum.</p>
+                             <h5>Establish</h5>
+                             <p class="text-muted">2 December 2010 Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio natus, velit ipsum.</p>
                          </div>
                      </li>
                      <li class="inverted">
@@ -139,8 +101,8 @@
                              <p>July 2013</p>
                         </div>
                          <div class="timeline-card">
-                             <h5>ขยาย 7 สาขา</h5>
-                             <p class="text-muted">7 ธันวาคม 2010 Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                             <h5>7 branches</h5>
+                             <p class="text-muted">9 July 2011 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, beatae!</p>
                          </div>
                      </li>
                      <li>
@@ -148,8 +110,8 @@
                              <p>August 2015</p>
                         </div>
                          <div class="timeline-card">
-                             <h5>ขยายสาขา ภาคใต้</h5>
-                             <p class="text-muted">7 ธันวาคม 2010 Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                             <h5>More then 17 branches</h5>
+                             <p class="text-muted">7 March 2013 Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                          </div>
                      </li>
                      <li class="inverted">
@@ -157,8 +119,8 @@
                              <p>December 2018 - Present</p>
                         </div>
                          <div class="timeline-card">
-                             <h5>ขายออนไลน์</h5>
-                             <p class="text-muted">7 ธันวาคม 2010 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate saepe facilis officiis ullam sequi deserunt minima hic, maiores error. In.</p>
+                             <h5>Online shopping</h5>
+                             <p class="text-muted">11 August 2017 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate saepe facilis officiis ullam sequi deserunt minima hic, maiores error. In.</p>
                          </div>
                      </li>
                      <li class="timeline-arrow">

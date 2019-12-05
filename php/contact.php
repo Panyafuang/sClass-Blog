@@ -1,3 +1,5 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=320, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 <?php
     require_once('connect.php');
 
@@ -20,7 +22,7 @@
             $phone = mysqli_real_escape_string($conn, $_POST['phone']);
             $msg = mysqli_real_escape_string($conn, $_POST['message']);
             
-            $sql = "INSERT INTO `contact` (`name`, `phone`, `email`, `message`, `created_at`) VALUES ('$name', '$phone', '$email', '$msg', '".date("Y-m-d")."' )";
+            $sql = "INSERT INTO `contacts` (`name`, `phone`, `email`, `message`, `created_at`) VALUES ('$name', '$phone', '$email', '$msg', '".date("Y-m-d")."' )";
             $result = $conn->query($sql) or die($conn->error);
 
             // Check Query

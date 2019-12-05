@@ -3,7 +3,7 @@
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="assets/images/logo.png" width="35px" height="35px" class="d-inline-block align-top">
-                &nbsp;owlboss
+                &nbsp;SURINSTUDIO
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,9 +14,6 @@
                 <ul class="navbar-nav ml-auto text-center">
                     <li class="nav-item <?php echo $pathName == 'index' ? 'active' : '';?> ">
                         <a class="nav-link" href="index.php">Home</a>
-                    </li>
-                    <li class="nav-item <?php echo $pathName == 'shop' ? 'active' : '';?>">
-                        <a class="nav-link" href="#">Shop</a>
                     </li>
                     <li class="nav-item <?php echo $pathName == 'blog' || $pathName == 'blog-detail' ? 'active' : '';?>">
                         <a class="nav-link" href="blog.php">Blog</a>
